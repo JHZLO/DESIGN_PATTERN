@@ -1,5 +1,7 @@
 package org.weatherObserver.controller;
 
-public class ObserverController {
+import org.weatherObserver.model.WeatherDate;
 
+public class ObserverController {
+    WeatherDate weatherDate = new WeatherDate();
 }
