@@ -19,7 +19,7 @@ public class WeatherData {
         addDisplay(new ThreeDisplay());
     }
 
-    public void measurementChange(){
+    private void measurementChange(){
         this.temperature = getTemperature();
         this.humidity = getHumidity();
         this.pressure = getPressure();
@@ -29,7 +29,7 @@ public class WeatherData {
         }
     }
 
-    public void addDisplay(Display display){
+    private void addDisplay(Display display){
         displays.add(display);
     }
 
