@@ -17,9 +17,8 @@ public class WeatherData {
         this.temperature = getTemperature();
         this.humidity = getHumidity();
         this.pressure = getPressure();
-        oneDisplay.updateDisplay(this.temperature, this.humidity, this.pressure);
 
-        oneDisplay.display();
+        oneDisplay.updateDisplay(this.temperature, this.humidity, this.pressure);
         twoDisplay.display(this.temperature, this.humidity, this.pressure);
         threeDisplay.display(this.temperature);
     }

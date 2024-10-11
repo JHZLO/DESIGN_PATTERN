@@ -10,22 +10,10 @@ public class OneDisplay implements Display{
         this.temperature = temperature;
         this.humidity = humidity;
         this.preesure = pressure;
+        display();
     }
 
-    @Override
-    public void display(){
-        System.out.println("WeatherData : temperature: " + this.temperature + ", humidity: "+ this.humidity);
+    private void display(){
+        System.out.println("One DISPLAY >> WeatherData : temperature: " + this.temperature + ", humidity: "+ this.humidity);
     }
-
-//    public float getTemperature(){
-//        return this.temperature;
-//    }
-//
-//    public float getHumidity(){
-//        return this.humidity;
-//    }
-//
-//    public float getPreesure(){
-//        return this.preesure;
-//    }
 }
