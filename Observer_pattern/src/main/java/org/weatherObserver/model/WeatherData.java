@@ -1,5 +1,6 @@
 package org.weatherObserver.model;
 
+import org.weatherObserver.view.Display;
 import org.weatherObserver.view.OneDisplay;
 import org.weatherObserver.view.ThreeDisplay;
 import org.weatherObserver.view.TwoDisplay;
@@ -8,7 +9,7 @@ public class WeatherData {
     private float temperature;
     private float humidity;
     private float pressure;
-    OneDisplay oneDisplay = new OneDisplay();
+    Display oneDisplay = new OneDisplay();
     TwoDisplay twoDisplay = new TwoDisplay();
     ThreeDisplay threeDisplay = new ThreeDisplay();
 
@@ -16,8 +17,9 @@ public class WeatherData {
         this.temperature = getTemperature();
         this.humidity = getHumidity();
         this.pressure = getPressure();
+        oneDisplay.updateDisplay(this.temperature, this.humidity, this.pressure);
 
-        oneDisplay.display(this.temperature, this.humidity);
+        oneDisplay.display();
         twoDisplay.display(this.temperature, this.humidity, this.pressure);
         threeDisplay.display(this.temperature);
     }
