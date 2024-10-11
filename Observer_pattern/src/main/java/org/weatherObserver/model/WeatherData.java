@@ -2,10 +2,6 @@ package org.weatherObserver.model;
 
 import java.util.ArrayList;
 import org.weatherObserver.view.Display;
-import org.weatherObserver.view.OneDisplay;
-import org.weatherObserver.view.ThreeDisplay;
-import org.weatherObserver.view.TwoDisplay;
-
 public class WeatherData {
     private float temperature;
     private float humidity;
@@ -14,12 +10,8 @@ public class WeatherData {
     ArrayList<Display> displays = new ArrayList<Display>();
 
     private void measurementChange(){
-        this.temperature = getTemperature();
-        this.humidity = getHumidity();
-        this.pressure = getPressure();
-
         for(Display myDisplay : displays){
-            myDisplay.updateDisplay(this.temperature, this.humidity, this.pressure);
+            myDisplay.updateDisplay();
         }
     }
 

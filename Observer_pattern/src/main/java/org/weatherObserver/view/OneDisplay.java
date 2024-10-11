@@ -1,19 +1,20 @@
 package org.weatherObserver.view;
 
-public class OneDisplay implements Display{
-    private float temperature;
-    private float humidity;
-    private float pressure;
+import org.weatherObserver.model.WeatherData;
 
-    @Override
-    public void updateDisplay(float temperature, float humidity, float pressure){
-        this.temperature = temperature;
-        this.humidity = humidity;
-        this.pressure = pressure;
-        display();
+public class OneDisplay implements Display{
+    WeatherData weatherData;
+
+    public OneDisplay(WeatherData weatherData){
+        this.weatherData = weatherData;
     }
 
-    private void display(){
-        System.out.println("One DISPLAY >> WeatherData : temperature: " + this.temperature + ", humidity: "+ this.humidity);
+    @Override
+    public void updateDisplay(){
+        display(weatherData.getTemperature(), weatherData.getHumidity());
+    }
+
+    private void display(float temperature, float humidity){
+        System.out.println("One DISPLAY >> WeatherData : temperature: " + temperature + ", humidity: "+ humidity);
     }
 }
