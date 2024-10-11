@@ -13,12 +13,6 @@ public class WeatherData {
 
     ArrayList<Display> displays = new ArrayList<Display>();
 
-    public WeatherData(){
-        addDisplay(new OneDisplay());
-        addDisplay(new TwoDisplay());
-        addDisplay(new ThreeDisplay());
-    }
-
     private void measurementChange(){
         this.temperature = getTemperature();
         this.humidity = getHumidity();
@@ -29,7 +23,7 @@ public class WeatherData {
         }
     }
 
-    private void addDisplay(Display display){
+    public void addDisplay(Display display){
         displays.add(display);
     }
 
