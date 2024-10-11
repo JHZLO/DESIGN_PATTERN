@@ -13,6 +13,7 @@ public class ThreeDisplay implements Display{
     public void updateDisplay(){
         display(weatherData.getTemperature());
     }
+
     private void display(float temperature){
         System.out.println("Three DISPLAY >> WeatherData : temperature: " + temperature);
     }

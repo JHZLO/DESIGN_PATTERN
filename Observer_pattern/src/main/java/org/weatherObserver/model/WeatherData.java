@@ -2,21 +2,13 @@ package org.weatherObserver.model;
 
 import java.util.ArrayList;
 import org.weatherObserver.view.Display;
-public class WeatherData {
+public class WeatherData extends DataSource {
     private float temperature;
     private float humidity;
     private float pressure;
 
-    ArrayList<Display> displays = new ArrayList<Display>();
-
     private void measurementChange(){
-        for(Display myDisplay : displays){
-            myDisplay.updateDisplay();
-        }
-    }
-
-    public void addDisplay(Display display){
-        displays.add(display);
+        myNotify();
     }
 
     public void setWeatherData(float temperature, float humidity, float pressure){
