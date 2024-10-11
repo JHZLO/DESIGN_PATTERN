@@ -19,8 +19,8 @@ public class WeatherData {
         this.pressure = getPressure();
 
         oneDisplay.updateDisplay(this.temperature, this.humidity, this.pressure);
-        twoDisplay.display(this.temperature, this.humidity, this.pressure);
-        threeDisplay.display(this.temperature);
+        twoDisplay.updateDisplay(this.temperature, this.humidity, this.pressure);
+        threeDisplay.updateDisplay(this.temperature, this.humidity, this.pressure);
     }
     public void setWeatherData(float temperature, float humidity, float pressure){
         this.temperature = temperature;
