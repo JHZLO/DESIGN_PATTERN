@@ -11,6 +11,7 @@ public class ChatDisplay {
     }
 
     private void display(){
+        System.out.println("=============채팅 내역============");
         System.out.println("이름 : " + this.name + " | 내용 : " + this.content);
     }
 }
