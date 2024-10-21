@@ -1,32 +1,20 @@
 package org.chat.domain;
 
 import java.util.ArrayList;
-import org.chat.view.Display;
 
-public class ChatService {
+public class ChatService extends DataSource {
     private ArrayList<Friend> friends;
     private ArrayList<Message> messages;
-
-    ArrayList<Display> displays = new ArrayList<>();
 
     public ChatService() {
         this.friends = new ArrayList<>();
         this.messages = new ArrayList<>();
     }
 
-    public void attach(Display display){
-        displays.add(display);
+    private void chatChange() {
+        myNotify();
     }
 
-    public void detach(Display display){
-        displays.remove(display);
-    }
-
-    private void chatChange(){
-        for(Display myDisplay : displays){
-            myDisplay.update();
-        }
-    }
     public void addFriend(Friend friend) {
         friends.add(friend);
         chatChange();
