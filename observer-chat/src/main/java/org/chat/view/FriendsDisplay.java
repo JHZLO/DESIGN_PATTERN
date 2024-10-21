@@ -1,9 +1,6 @@
 package org.chat.view;
 
-import org.chat.domain.Friends;
-
 public class FriendsDisplay {
-    private Friends friends;
 
     public FriendsDisplay(){
     }

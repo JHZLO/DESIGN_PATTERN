@@ -3,11 +3,10 @@ package org.chat.domain;
 import org.chat.view.FriendsDisplay;
 
 public class Friend {
-    private String name;
-    private Integer age;
-    private String phoneNumber;
+    private final String name;
+    private final Integer age;
+    private final String phoneNumber;
 
-    FriendsDisplay friendsDisplay = new FriendsDisplay();
 
     public Friend(String name, Integer age, String phoneNumber){
         this.name = name;
@@ -21,5 +20,9 @@ public class Friend {
 
     public Integer getAge(){
         return age;
+    }
+
+    public String getPhoneNumber(){
+        return phoneNumber;
     }
 }

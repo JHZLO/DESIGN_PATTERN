@@ -11,20 +11,20 @@ observer 패턴을 이용한 채팅 서비스 구현하기
 ## 설계
 
 - display <<interface>>
-  - ChatInformation chatInformation
+  - ChatInformation chatService
     - update()
       - 친구 목록 display
         - display()
       - 채팅 목록 display
         - display()
 
-- ChatService
+- DataSource
   - List<Display> displays
     - addDisplay()
     - detachDisplay()
     - myNotify()
 
-- ChatInformation
+- ChatService
   - List<message> messages
   - List<Friend> friends
     - chatChange()
