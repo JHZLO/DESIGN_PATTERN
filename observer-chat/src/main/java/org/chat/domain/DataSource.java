@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import org.chat.view.Display;
 
 public class DataSource {
-    ArrayList<Display> displays = new ArrayList<>();
+    private ArrayList<Display> displays = new ArrayList<>();
 
     public void attach(Display display){
         displays.add(display);

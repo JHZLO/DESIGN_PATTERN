@@ -5,7 +5,7 @@ import org.chat.domain.ChatService;
 import org.chat.domain.Message;
 
 public class MessagesDisplay implements Display {
-    ChatService chatService;
+    private ChatService chatService;
     private ArrayList<Message> messages;
 
     public MessagesDisplay(ChatService chatService){

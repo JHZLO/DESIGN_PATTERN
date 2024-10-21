@@ -5,7 +5,7 @@ import org.chat.domain.ChatService;
 import org.chat.domain.Friend;
 
 public class FriendsDisplay implements Display {
-    ChatService chatService;
+    private ChatService chatService;
     private ArrayList<Friend> friends;
 
     public FriendsDisplay(ChatService chatService){
