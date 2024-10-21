@@ -1,4 +1,6 @@
-package org.chat;
+package org.chat.domain;
+
+import org.chat.view.ChatDisplay;
 
 public class Chatting {
     private String name;

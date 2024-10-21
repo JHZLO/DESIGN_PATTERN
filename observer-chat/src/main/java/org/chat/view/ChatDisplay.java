@@ -1,4 +1,4 @@
-package org.chat;
+package org.chat.view;
 
 public class ChatDisplay {
     private String name;
@@ -12,6 +12,6 @@ public class ChatDisplay {
 
     private void display(){
         System.out.println("=============채팅 내역============");
-        System.out.println("이름 : " + this.name + " | 내용 : " + this.content);
+        System.out.println(this.name + ": " + this.content);
     }
 }
