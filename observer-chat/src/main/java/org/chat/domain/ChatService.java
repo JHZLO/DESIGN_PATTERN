@@ -1,43 +1,52 @@
 package org.chat.domain;
 
 import java.util.ArrayList;
+import org.chat.view.Display;
 
 public class ChatService {
     private ArrayList<Friend> friends;
     private ArrayList<Message> messages;
 
-    public ChatService(){
+    ArrayList<Display> displays = new ArrayList<>();
+
+    public ChatService() {
         this.friends = new ArrayList<>();
         this.messages = new ArrayList<>();
     }
-    public void addFriend(Friend friend){
+
+    public void attach(Display display){
+        displays.add(display);
+    }
+
+    public void detach(Display display){
+        displays.remove(display);
+    }
+
+    private void chatChange(){
+        for(Display myDisplay : displays){
+            myDisplay.update();
+        }
+    }
+    public void addFriend(Friend friend) {
         friends.add(friend);
-        displayFriendList();
+        chatChange();
     }
 
-    public void deleteFriend(Friend friend){
+    public void deleteFriend(Friend friend) {
         friends.remove(friend);
-        displayFriendList();
+        chatChange();
     }
 
-    public void sendMessage(Message message){
+    public void sendMessage(Message message) {
         messages.add(message);
-        displayMessageList();
+        chatChange();
     }
 
-    private void displayFriendList() {
-        int cnt = 1;
-        System.out.println("=============친구 목록============");
-        for (Friend myFriend : friends) {
-            System.out.println("번호: " + cnt + " | 이름: " + myFriend.getName() + " | 나이: "+ myFriend.getAge());
-            cnt ++;
-        }
+    public ArrayList<Friend> getFriends() {
+        return friends;
     }
 
-    private void displayMessageList() {
-        System.out.println("=============채팅 내역============");
-        for (Message myMessage : messages) {
-            System.out.println(myMessage.getName() + " : "+ myMessage.getContent());
-        }
+    public ArrayList<Message> getMessages() {
+        return messages;
     }
 }

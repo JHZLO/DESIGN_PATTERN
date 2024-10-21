@@ -3,10 +3,15 @@ package org.chat;
 import org.chat.domain.ChatService;
 import org.chat.domain.Friend;
 import org.chat.domain.Message;
+import org.chat.view.FriendsDisplay;
+import org.chat.view.MessagesDisplay;
 
 public class Main {
     public static void main(String[] args) {
         ChatService chatService = new ChatService();;
+
+        chatService.attach(new FriendsDisplay(chatService));
+        chatService.attach(new MessagesDisplay(chatService));
 
         chatService.addFriend(new Friend("김준형",24,"010-0000-0000"));
         chatService.addFriend(new Friend("홍길동",22,"010-0000-0000"));
