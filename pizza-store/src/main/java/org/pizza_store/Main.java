@@ -1,6 +1,6 @@
-package org.example;
+package org.pizza_store;
 
-import org.example.factory.PizzaStroe;
+import org.pizza_store.factory.PizzaStroe;
 
 public class Main {
     public static void main(String[] args) {

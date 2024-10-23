@@ -1,11 +1,9 @@
-package org.example.factory;
+package org.pizza_store.factory;
 
-import org.example.domain.CheesePizza;
-import org.example.domain.ClamPizza;
-import org.example.domain.Pizza;
+import org.pizza_store.domain.Pizza;
 
 public class PizzaStroe {
-    public void orderPizza(String type){
+    public void orderPizza(String type) {
         PizzaFactory factory = new PizzaFactory();
         Pizza pizza = factory.createPizza(type);
 

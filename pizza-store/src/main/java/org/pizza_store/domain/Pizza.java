@@ -1,17 +1,18 @@
-package org.example.domain;
+package org.pizza_store.domain;
 
 public class Pizza {
-    public void prepare(){}
+    public void prepare() {
+    }
 
-    public void bake(){
+    public void bake() {
         System.out.println("baking...");
     }
 
-    public void cut(){
+    public void cut() {
         System.out.println("cutting...");
     }
 
-    public void box(){
+    public void box() {
         System.out.println("boxing...");
     }
 }
