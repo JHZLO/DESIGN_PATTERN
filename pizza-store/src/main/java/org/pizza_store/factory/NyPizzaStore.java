@@ -1,11 +1,10 @@
 package org.pizza_store.factory;
 
-import org.pizza_store.domain.ChicagoCheesePizza;
 import org.pizza_store.domain.NyCheesePizza;
 import org.pizza_store.domain.NyClamPizza;
 import org.pizza_store.domain.Pizza;
 
-public class NyPizzaFactory extends PizzaFactory {
+public class NyPizzaStore extends PizzaStore {
     @Override
     public Pizza createPizza(String type) {
         Pizza pizza = null;
