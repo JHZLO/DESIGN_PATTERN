@@ -1,6 +1,13 @@
 package org.pizza_store.domain;
 
+import org.pizza_store.domain.ingredient.cheese.Cheese;
+import org.pizza_store.domain.ingredient.clam.Clam;
+import org.pizza_store.domain.ingredient.dough.Dough;
+
 public class Pizza {
+    Dough dough;
+    Clam clam;
+    Cheese cheese;
     public void prepare() {
     }
 
