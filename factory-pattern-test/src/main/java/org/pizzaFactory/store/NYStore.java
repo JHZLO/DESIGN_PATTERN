@@ -1,13 +1,14 @@
-package org.pizzaFactory;
+package org.pizzaFactory.store;
 
-import org.pizzaFactory.factory.HeadStorePizzaFactory;
 import org.pizzaFactory.factory.NYPizzaFactory;
 import org.pizzaFactory.factory.PizzaFactory;
 import org.pizzaFactory.pizza.Pizza;
+import org.pizzaFactory.store.MyPizzaStore;
 
-public class NYStore {
+public class NYStore extends MyPizzaStore {
     PizzaFactory pizzaFactory = new NYPizzaFactory();
 
+    @Override
     public Pizza createPizza(String type){
         Pizza pizza = null;
         if (type.equalsIgnoreCase("cheese")) {
@@ -20,14 +21,5 @@ public class NYStore {
             pizza = pizzaFactory.getPepperoniPizza();
         }
         return pizza;
-    }
-
-    public void orderPizza(String type) {
-        Pizza pizza = createPizza(type);
-
-        pizza.prepare();
-        pizza.bake();
-        pizza.cut();
-        pizza.box();
     }
 }
