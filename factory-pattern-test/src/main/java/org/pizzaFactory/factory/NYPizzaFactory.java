@@ -1,9 +1,8 @@
 package org.pizzaFactory.factory;
 
-import org.pizzaFactory.pizza.ChicagoStyleClamPizza;
-import org.pizzaFactory.pizza.NYStyleCheesePizza;
-import org.pizzaFactory.pizza.NYStyleClamPizza;
-import org.pizzaFactory.pizza.NYStylePepperoniPizza;
+import org.pizzaFactory.pizza.cheese.NYStyleCheesePizza;
+import org.pizzaFactory.pizza.clam.NYStyleClamPizza;
+import org.pizzaFactory.pizza.pepperoni.NYStylePepperoniPizza;
 import org.pizzaFactory.pizza.Pizza;
 
 public class NYPizzaFactory extends PizzaFactory{

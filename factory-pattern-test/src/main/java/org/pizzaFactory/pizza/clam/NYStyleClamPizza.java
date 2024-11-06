@@ -1,6 +1,6 @@
-package org.pizzaFactory.pizza;
+package org.pizzaFactory.pizza.clam;
 
-public class NYStyleClamPizza extends Pizza {
+public class NYStyleClamPizza extends ClamPizza {
     @Override
     public void prepare() {
         System.out.println("preparing NYStyleClamPizza...");
