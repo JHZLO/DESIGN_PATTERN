@@ -3,15 +3,15 @@ package org.pizzaFactory.factory;
 import org.pizzaFactory.pizza.Pizza;
 
 public class PizzaFactory{
-    public static Pizza getClamPizza() {
+    public Pizza getClamPizza() {
         return null;
     }
 
-    public static Pizza getCheesePizza(){
+    public Pizza getCheesePizza(){
         return null;
     }
 
-    public static Pizza getPepperoniPizza() {
+    public Pizza getPepperoniPizza() {
         return null;
     }
 }
