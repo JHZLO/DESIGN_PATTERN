@@ -1,20 +1,22 @@
 package org.pizzaFactory;
 
-import org.pizzaFactory.factory.ChicagoPizzaFactory;
-import org.pizzaFactory.factory.PizzaFactory;
-import org.pizzaFactory.pizza.Pizza;
-
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello Pizza World");
 
-        MyPizzaStore myPizzaStore = new MyPizzaStore();
-        myPizzaStore.orderPizza("cheese");
-        myPizzaStore.orderPizza("clam");
-        myPizzaStore.orderPizza("pepperoni");
+        HeadStore headStore = new HeadStore();
+        headStore.orderPizza("cheese");
+        headStore.orderPizza("clam");
+        headStore.orderPizza("pepperoni");
 
-        PizzaFactory pizzaFactory = new ChicagoPizzaFactory();
-        Pizza pizza = pizzaFactory.getCheesePizza();
-        pizza.cut();
+        NYStore nyStore = new NYStore();
+        nyStore.orderPizza("cheese");
+        nyStore.orderPizza("clam");
+        nyStore.orderPizza("pepperoni");
+
+        ChicagoStore chicagoStore = new ChicagoStore();
+        chicagoStore.orderPizza("cheese");
+        chicagoStore.orderPizza("clam");
+        chicagoStore.orderPizza("pepperoni");
     }
 }
