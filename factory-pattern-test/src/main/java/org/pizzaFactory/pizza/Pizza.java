@@ -1,8 +1,8 @@
 package org.pizzaFactory.pizza;
 
-public class Pizza {
-    public void prepare() {
-    }
+public abstract class Pizza {
+    public abstract void prepare();
+
     public void bake() {
         System.out.println("baking...");
     }

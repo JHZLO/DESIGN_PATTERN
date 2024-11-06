@@ -1,13 +1,8 @@
 package org.pizzaFactory.pizza.pepperoni;
 
-import org.pizzaFactory.pizza.Pizza;
+import org.pizzaFactory.pizza.ChicagoStylePizza;
 
-public class ChicagoStylePepperoniPizza extends Pizza {
-    @Override
-    public void cut() {
-        System.out.println("Cutting the pizza into square slices ");
-    }
-
+public class ChicagoStylePepperoniPizza extends ChicagoStylePizza {
     @Override
     public void prepare() {
         System.out.println("preparing ChicagoStylePepperoniPizza...");
