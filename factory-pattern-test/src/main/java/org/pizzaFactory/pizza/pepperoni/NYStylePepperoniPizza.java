@@ -1,6 +1,8 @@
 package org.pizzaFactory.pizza.pepperoni;
 
-public class NYStylePepperoniPizza extends PepperoniPizza {
+import org.pizzaFactory.pizza.Pizza;
+
+public class NYStylePepperoniPizza extends Pizza {
     @Override
     public void prepare() {
         System.out.println("preparing NYStylePepperoniPizza...");
