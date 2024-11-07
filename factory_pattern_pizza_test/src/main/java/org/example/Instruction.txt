@@ -1,0 +1,26 @@
+Factory Pattern 실습
+   > 주어진 코드를 실행시켜 그 결과를 캡쳐하여 "제출문서"에 저장한다.
+1. 3가지 Pizza; Clam Pizza, Cheese Pizza, Pepperoni Pizza를 생산하는 PizzaFactory Class를 만들어라.
+   PizzaFactory Class에는 Clam Pizza생산을 위해 getClamPizza(), Cheese Pizza생산을 위해 getCheesePizza(), 
+   Pepperoni Pizza생산을 위해 getPepperoniPizza() method를 가진다.
+2. PizzaFactory를 상속받아 NYPizzaFactory Class를 만들어라.
+   NYPizzaFactory는 ClamPizza로 NYStyleClamPizza를, CheesePizza로 NYStyleCheesePizza를,
+   PepperoniPizza로는 NYStylePepperoniPizza를 만든다.
+3. PizzaFactory를 상속받아ChicagoPizzaFactory를 만들어라.
+   ChicagoPizzaFactory는 ClamPizza로 ChicagoStyleClamPizza를, CheesePizza로 ChicagoStyleCheesePizza를,
+   PepperoniPizza로는 ChicagoStylePepperoniPizza를 만든다.
+4. 2번, 3번을 참고하여 HeadStorePizzaFactory를 만들어라.
+   HeadStore에서는 오리지날 ClamPizza, CheesePizza, PepperoniPizza를 만든다.
+5. MyPizzaStore.java에 PizzaFactory객체를 위한 Attribute "pizzaFactory"를 만들고 
+   HeadStorePizzaFactory 객체를 생성하여 pizzaFactory에 할당한다.
+6. createPizza() method의 각 Pizza object instance 생성(new)을 Factory의 getInstance()로 모두 바꾸어라;
+   예를 들어 new ClamPizza()를 pizzaFactory.getClamPizza()로 바꾼다.
+> 여기까지 작업 후 App.java를 수행시켜 그 결과를 "결과 1"로 표시하여 제출문서에 포함한다.
+7. Chicago Style Pizza자를때 사각형으로 피자를 자른다. cut() method를 변형하여 ChicagoStyle Pizza 는
+   사각형으로 피자를 자른다는 "Cutting the pizza into square slices" 문자를 출력하게 변환한다.
+8. pizzaFactory attribute에 ChicagoPizzaFactory를 생성하여 할당한다.
+> 여기까지 작업 후 App.java를 수행시켜 그 결과를 "결과 2"로 표시하여 제출문서에 포함한다.
+9. Factory Method Pattern을 적용하여 MyPizzaStore를 상속받아 HeadStore, NYStore, ChicagoStore를 만들어라.
+> App에서 myPizzaStore에 NYStore를 할당하여 수행 후그 결과를 "결과 3"로 표시하여 제출문서에 포함한다.
+
+* 작성된 모든코드와 함께 "제출문서"를 압축 파일로 만들어 제출한다. <수고했습니다.>
