@@ -1,4 +1,8 @@
-public class ChicagoStyleClamPizza extends Pizza {
+package org.example;
+
+import org.example.Pizza;
+
+public class ChicagoStyleClamPizza extends ChicagoStylePizza {
 	public ChicagoStyleClamPizza() {
 		name = "Chicago Style Clam Pizza";
 		dough = "Extra Thick Crust Dough";

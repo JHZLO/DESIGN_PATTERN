@@ -1,3 +1,7 @@
+package org.example;
+
+import org.example.Pizza;
+
 public class PepperoniPizza extends Pizza {
 	public PepperoniPizza() {
 		name = "Pepperoni Pizza";

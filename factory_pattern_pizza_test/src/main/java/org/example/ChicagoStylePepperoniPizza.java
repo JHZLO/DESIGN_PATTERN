@@ -1,4 +1,9 @@
-public class ChicagoStylePepperoniPizza extends Pizza {
+package org.example;
+
+import org.example.Pizza;
+
+public class
+ChicagoStylePepperoniPizza extends ChicagoStylePizza {
 	public ChicagoStylePepperoniPizza() {
 		name = "Chicago Style Pepperoni Pizza";
 		dough = "Extra Thick Crust Dough";
@@ -10,5 +15,4 @@ public class ChicagoStylePepperoniPizza extends Pizza {
 		toppings.add("Eggplant");
 		toppings.add("Sliced Pepperoni");
 	}
-
 }

@@ -1,3 +1,7 @@
+package org.example;
+
+import org.example.Pizza;
+
 public class NYStyleCheesePizza extends Pizza {
 
 	public NYStyleCheesePizza() { 
