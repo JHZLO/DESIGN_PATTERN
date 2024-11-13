@@ -6,6 +6,7 @@ import org.remote.command.NoCommand;
 public class RemoteController {
     private Command[] onCommands;
     private Command[] offCommands;
+    private Command undoCommand;
 
     public RemoteController() {
         onCommands = new Command[7];
@@ -16,6 +17,7 @@ public class RemoteController {
             onCommands[i] = noCommand;
             offCommands[i] = noCommand;
         }
+        undoCommand = noCommand;
     }
 
     public void setCommand(int slot, Command onCommand, Command offCommand) {
@@ -25,10 +27,16 @@ public class RemoteController {
 
     public void onButtonWasPushed(int slot) {
         onCommands[slot].execute();
+        undoCommand = onCommands[slot];
     }
 
     public void offButtonWasPushed(int slot) {
         offCommands[slot].execute();
+        undoCommand = offCommands[slot];
+    }
+
+    public void undoButtonWasPushed(){
+        undoCommand.undo(); // 마지막으로 했던 작업 취소
     }
 
     public String toString() {

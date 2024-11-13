@@ -22,8 +22,10 @@ public class Main {
 
         remoteController.onButtonWasPushed(0);
         remoteController.offButtonWasPushed(0);
+        remoteController.undoButtonWasPushed();
         remoteController.onButtonWasPushed(1);
         remoteController.offButtonWasPushed(1);
+        remoteController.undoButtonWasPushed();
 
         remoteController.onButtonWasPushed(2);
 
