@@ -13,4 +13,9 @@ public class JobProcessStartCommand implements Command{
     public void execute(){
         jobProcess.start();
     }
+
+    @Override
+    public void undo(){
+        jobProcess.stop();
+    }
 }

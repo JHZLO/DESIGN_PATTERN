@@ -13,4 +13,9 @@ public class SimpleProcessStartCommand implements Command{
     public void execute(){
         simpleProcess.start();
     }
+
+    @Override
+    public void undo(){
+        simpleProcess.stop();
+    }
 }

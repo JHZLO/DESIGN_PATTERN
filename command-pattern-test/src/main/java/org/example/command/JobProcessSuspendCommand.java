@@ -14,4 +14,8 @@ public class JobProcessSuspendCommand implements Command{
         jobProcess.suspend();
     }
 
+    @Override
+    public void undo(){
+        jobProcess.resume();
+    }
 }

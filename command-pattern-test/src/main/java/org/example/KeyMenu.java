@@ -3,14 +3,18 @@ package org.example;
 import java.util.ArrayList;
 import java.util.Scanner;
 import org.example.command.Command;
+import org.example.command.NoCommand;
 
 public class KeyMenu {
     private ArrayList<String> menu = new ArrayList<>();
-    private ArrayList<Command> commands = new ArrayList<>();
+    private ArrayList<Command> startCommands = new ArrayList<>();
+    private ArrayList<Command> stopCommands = new ArrayList<>();
+    private Command undoCommand = new NoCommand();
 
-    public void addItem(String menu, Command command) {
-        this.commands.add(command);
+    public void addItem(String menu, Command startCommand, Command stopCommand) {
         this.menu.add(menu);
+        this.startCommands.add(startCommand);
+        this.stopCommands.add(stopCommand);
     }
 
     public void showMenu() {
@@ -39,10 +43,33 @@ public class KeyMenu {
     }
 
     private void executeCommand(int x) {
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < startCommands.size(); i++) {
             if (i == x-1) {
-                commands.get(i).execute();
+                executeStartCommand(i);
+                executeStopCommand(i);
             }
         }
+        if(x == 0){
+            undoCommand();
+        }
+    }
+
+    private void executeStopCommand(final int i) {
+        stopCommands.get(i).execute();
+        undoCommand = stopCommands.get(i);
+    }
+
+    private void executeStartCommand(final int i) {
+        startCommands.get(i).execute();
+        undoCommand = startCommands.get(i);
+    }
+
+    private void undoCommand(){
+        System.out.println("작업을 취소합니다.");
+        undoButtonWasPushed();
+    }
+
+    public void undoButtonWasPushed(){
+        undoCommand.undo(); // 마지막으로 했던 작업 취소
     }
 }
