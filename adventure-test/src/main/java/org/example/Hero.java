@@ -11,6 +11,6 @@ public class Hero {
 
     @Override
     public String toString() {
-        return "Hero: " + name + " is a " + attribute;
+        return "Hero: " + name + " is a " + attribute +" ";
     }
 }

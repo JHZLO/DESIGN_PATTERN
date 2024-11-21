@@ -11,6 +11,6 @@ public class Sword extends WeaponDecorator {
 
 	@Override
 	public String toString() {
-		return super.toString() + " with weapon: " + weapon;
+		return super.toString() + "[weapon: " + weapon + "]";
 	}
 }

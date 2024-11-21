@@ -11,6 +11,6 @@ public class Armor extends ProtectiveDecorator{
 
     @Override
     public String toString() {
-        return super.toString() + " with protective: " + protective;
+        return super.toString() + "[protective: " + protective + "]";
     }
 }
