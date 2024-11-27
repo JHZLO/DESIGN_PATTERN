@@ -4,5 +4,5 @@ interface Hexahedron {
     int getWidthCm();
     int getHeightCm();
     int getLengthCm();
-    int volume();
+    int getVolume();
 }

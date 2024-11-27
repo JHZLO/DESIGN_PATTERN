@@ -19,7 +19,7 @@ public class BoxClassAdapter extends Box implements Hexahedron {
     }
 
     @Override
-    public int volume() {
+    public int getVolume() {
         return getWidthCm() * getHeightCm() * getLengthCm();
     }
 
