@@ -14,15 +14,15 @@ width, hight, length를 측정하면 그 값을 돌려주는 `getWidth()`, `getH
 ```java
 public class Box {
 public int getWidth()  { return 5; }
-public int getHight()  { return 8; }
+public int getHeight()  { return 8; }
 public int getLength() { return 7; }
 }
 ```
 ---
 ## ✅ 기능 구현 목록 정리
 ### Hexahedron 객체 생성
-  - [ ] 클래스 `어뎁터 패턴`을 적용하여 모든 값을 `센티`로 돌려 준다.
-  - [ ] 부피를 계산하는 메소드 volume() 를 추가.
+  - [ ] 클래스 `어뎁터 패턴`을 적용하여 모든 값을 `cm`로 돌려 준다.
+  - [ ] 부피를 계산하는 메소드 `volume()` 를 추가.
     - 이때 인치를 센티로 바꿀때 만들어지는 오차를 최소한으로 계산.
 
 ### Cube 객체 생성
@@ -32,7 +32,7 @@ public int getLength() { return 7; }
 
 ### 싱글턴 패턴 구현
 - [ ] 각 객체는 중복사용이 가능
-- [ ] 한개의 인스턴스만 만들어 사용
+- [ ] 한 개의 인스턴스만 만들어 사용
 
 ---
 
