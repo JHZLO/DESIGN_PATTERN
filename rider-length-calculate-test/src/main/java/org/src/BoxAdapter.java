@@ -1,26 +1,21 @@
 package org.src;
 
-public class BoxAdapter implements Hexahedron {
-    private static final double INCH_TO_CM = 2.54;
-    private final Box box;
-
-    public BoxAdapter(Box box) {
-        this.box = box;
-    }
+public class BoxAdapter extends Box implements Hexahedron {
+    private static final double INCH_TO_CM_CONVERSION = 2.54;
 
     @Override
     public int getWidthCm() {
-        return convertToCm(box.getWidth());
+        return convertToCm(getWidth());
     }
 
     @Override
     public int getHeightCm() {
-        return convertToCm(box.getHeight());
+        return convertToCm(getHeight());
     }
 
     @Override
     public int getLengthCm() {
-        return convertToCm(box.getLength());
+        return convertToCm(getLength());
     }
 
     @Override
@@ -29,6 +24,6 @@ public class BoxAdapter implements Hexahedron {
     }
 
     private int convertToCm(int inchValue) {
-        return (int) Math.round(inchValue * INCH_TO_CM);
+        return (int) Math.round(inchValue * INCH_TO_CM_CONVERSION);
     }
 }
