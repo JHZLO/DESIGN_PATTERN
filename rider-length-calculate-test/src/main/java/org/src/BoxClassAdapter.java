@@ -1,6 +1,6 @@
 package org.src;
 
-public class BoxAdapter extends Box implements Hexahedron {
+public class BoxClassAdapter extends Box implements Hexahedron {
     private static final double INCH_TO_CM_CONVERSION = 2.54;
 
     @Override
