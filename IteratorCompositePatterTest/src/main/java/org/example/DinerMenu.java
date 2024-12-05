@@ -1,11 +1,11 @@
 package org.example;
 
-public class DinnerMenu {
+public class DinerMenu {
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
     MenuItem[] menuItems;
 
-    public DinnerMenu() {
+    public DinerMenu() {
         menuItems = new MenuItem[MAX_ITEMS];
 
         addItem("Vegetarian BLT", "(Fakin') Bacon with lettuce & tomato on whole wheat", true, 2.99);
