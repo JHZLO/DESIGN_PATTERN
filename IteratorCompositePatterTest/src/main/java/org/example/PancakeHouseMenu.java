@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import org.example.menu.MenuItem;
 
 public class PancakeHouseMenu {
     ArrayList<MenuItem> menuItems;

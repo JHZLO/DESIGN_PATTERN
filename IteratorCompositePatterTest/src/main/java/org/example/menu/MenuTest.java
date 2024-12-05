@@ -1,4 +1,8 @@
-package org.example;
+package org.example.menu;
+
+import org.example.PancakeHouseMenu;
+import org.example.menu.DinerMenu;
+import org.example.menu.MenuItem;
 
 public class MenuTest {
     public static void main(String args[]) {
