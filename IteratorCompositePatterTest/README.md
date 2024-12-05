@@ -12,7 +12,7 @@
 
 ## Iterator Pattern 적용
 - [x] `PancakeHouseMenuIterator` class
-- [ ] `DinerMenuIterator` class
+- [x] `DinerMenuIterator` class
 - [ ] `printMenu()`를 개선
   - for-each 사용
 - [ ] `vegeterianMenu()` 개선
