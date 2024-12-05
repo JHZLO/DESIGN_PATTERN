@@ -1,8 +1,9 @@
 package org.example.iterator;
 
+import java.util.Iterator;
 import org.example.menu.MenuItem;
 
-public class DinerMenuIterator implements Iterator {
+public class DinerMenuIterator implements Iterator<MenuItem> {
     private final MenuItem[] items;
     private int position = 0;
 
@@ -23,10 +24,5 @@ public class DinerMenuIterator implements Iterator {
         MenuItem menuItem = items[position];
         position += 1;
         return menuItem;
-    }
-
-    @Override
-    public void initPosition(){
-        this.position = 0;
     }
 }

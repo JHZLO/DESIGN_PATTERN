@@ -1,9 +1,10 @@
 package org.example.iterator;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import org.example.menu.MenuItem;
 
-public class PancakeHouseMenuIterator implements Iterator {
+public class PancakeHouseMenuIterator implements Iterator<MenuItem> {
     private final ArrayList<MenuItem> items;
     private int position = 0;
 
@@ -24,10 +25,5 @@ public class PancakeHouseMenuIterator implements Iterator {
         MenuItem menuItem = items.get(position);
         position += 1;
         return menuItem;
-    }
-
-    @Override
-    public void initPosition(){
-        this.position = 0;
     }
 }

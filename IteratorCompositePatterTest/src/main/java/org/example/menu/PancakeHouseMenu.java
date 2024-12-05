@@ -1,11 +1,11 @@
 package org.example.menu;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import org.example.iterator.PancakeHouseMenuIterator;
-import org.example.iterator.Iterator;
 
 
-public class PancakeHouseMenu {
+public class PancakeHouseMenu implements Menu{
     ArrayList<MenuItem> menuItems;
 
     public PancakeHouseMenu() {
@@ -22,7 +22,7 @@ public class PancakeHouseMenu {
         menuItems.add(menuItem);
     }
 
-    public Iterator createIterator(){
+    public Iterator<MenuItem> createIterator(){
         return new PancakeHouseMenuIterator(menuItems);
     }
 
