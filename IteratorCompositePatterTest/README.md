@@ -1,7 +1,7 @@
 # 반복자 & 컴포지트 패턴
 
 ##  MenuTest.java
-- [ ] `branchMenu()` 메서드 생성하기
+- [x] `branchMenu()` 메서드 생성하기
   - 아점 메뉴를 출력한다.
 - [ ] `dinerMenu()` 메서드 생성하기
   - 저녁 메뉴를 출력한다.
