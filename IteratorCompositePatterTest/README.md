@@ -3,7 +3,7 @@
 ##  MenuTest.java
 - [x] `branchMenu()` 메서드 생성하기
   - 아점 메뉴를 출력한다.
-- [ ] `dinerMenu()` 메서드 생성하기
+- [x] `dinerMenu()` 메서드 생성하기
   - 저녁 메뉴를 출력한다.
 - [ ] `printMenu()` 메서드 생성하기
   - 통합 메뉴를 출력한다.
