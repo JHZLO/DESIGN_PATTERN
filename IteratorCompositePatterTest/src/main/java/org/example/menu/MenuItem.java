@@ -1,10 +1,10 @@
 package org.example.menu;
 
-public class MenuItem {
-    String name;
-    String description;
-    boolean vegetarian;
-    double price;
+public class MenuItem extends Item {
+    private final String name;
+    private final String description;
+    private final boolean vegetarian;
+    private final double price;
 
     public MenuItem(String name, String description, boolean vegetarian, double price) {
         this.name = name;
@@ -13,23 +13,30 @@ public class MenuItem {
         this.price = price;
     }
 
+    @Override
     public String getName() {
         return name;
     }
 
+    @Override
     public String getDescription() {
         return description;
     }
 
+    @Override
     public double getPrice() {
         return price;
     }
 
+    @Override
     public boolean isVegetarian() {
         return vegetarian;
     }
 
-    public String toString() {
-        return (name + ", $" + price + "\n   " + description);
+    @Override
+    public void operation() {
+        System.out.print(name);
+        System.out.println("\t\t" + price);
+        System.out.println("\t" + description);
     }
 }

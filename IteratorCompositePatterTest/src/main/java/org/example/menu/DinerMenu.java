@@ -1,14 +1,15 @@
 package org.example.menu;
 
-import java.util.Iterator;
+import org.example.iterator.Iterator;
 import org.example.iterator.DinerMenuIterator;
 
-public class DinerMenu implements Menu{
+public class DinerMenu extends Menu{
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
     MenuItem[] menuItems;
 
     public DinerMenu() {
+        super("DinnerMenu");
         menuItems = new MenuItem[MAX_ITEMS];
 
         addItem("Vegetarian BLT", "(Fakin') Bacon with lettuce & tomato on whole wheat", true, 2.99);
@@ -29,7 +30,7 @@ public class DinerMenu implements Menu{
         }
     }
 
-    public Iterator<MenuItem> createIterator(){
+    public Iterator createIterator(){
         return new DinerMenuIterator(menuItems);
     }
 }

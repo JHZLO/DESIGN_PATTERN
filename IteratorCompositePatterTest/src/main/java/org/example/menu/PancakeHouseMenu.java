@@ -1,14 +1,15 @@
 package org.example.menu;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+import org.example.iterator.Iterator;
 import org.example.iterator.PancakeHouseMenuIterator;
 
 
-public class PancakeHouseMenu implements Menu{
+public class PancakeHouseMenu extends Menu{
     ArrayList<MenuItem> menuItems;
 
     public PancakeHouseMenu() {
+        super("BranchMenu");
         menuItems = new ArrayList<MenuItem>();
 
         addItem("K&B's Pancake Breakfast", "Pancakes with scrambled eggs, and toast", true, 2.99);
@@ -22,11 +23,7 @@ public class PancakeHouseMenu implements Menu{
         menuItems.add(menuItem);
     }
 
-    public Iterator<MenuItem> createIterator(){
+    public Iterator createIterator(){
         return new PancakeHouseMenuIterator(menuItems);
-    }
-
-    public ArrayList<MenuItem> getMenuItems() {
-        return menuItems;
     }
 }

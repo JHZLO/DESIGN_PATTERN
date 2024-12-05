@@ -1,4 +1,6 @@
-package org.example;
+package org.example.menu;
+
+import org.example.iterator.Iterator;
 
 public abstract class Item {
     public void add(Item item) {
@@ -31,5 +33,13 @@ public abstract class Item {
 
     public void print() {
         throw new UnsupportedOperationException();
+    }
+
+    public Iterator createIterator() {
+        throw new UnsupportedOperationException();
+    }
+
+    public void operation() {
+        print();
     }
 }

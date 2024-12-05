@@ -23,8 +23,8 @@
 
 ## Composite Pattern 활용
 - [x] `PancakeHouseMenuIterator`와 `DinerMenuIterator`를 Item class의 subclass로 만든다.
-- [ ] composite pattern의  The `operation()` 을 메뉴 출력 또는 MenuItem을 차례로 전달하는 메소드를 정의하여 통합 메뉴를 출력한다.
+- [x] composite pattern의  The `operation()` 을 메뉴 출력 또는 MenuItem을 차례로 전달하는 메소드를 정의하여 통합 메뉴를 출력한다.
 
 
 ## REFACTOR
--[ ] 맨 처음에 적용한 것을 Iterator와 Composite를 적용하여 테스트 한다.
+-[x] 맨 처음에 적용한 것을 Iterator와 Composite를 적용하여 테스트 한다.
