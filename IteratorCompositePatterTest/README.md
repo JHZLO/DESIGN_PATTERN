@@ -11,7 +11,7 @@
   - 비건 메뉴를 출력한다.
 
 ## Iterator Pattern 적용
-- [ ] `PancakeHouseMenuIterator` class
+- [x] `PancakeHouseMenuIterator` class
 - [ ] `DinerMenuIterator` class
 - [ ] `printMenu()`를 개선
   - for-each 사용
