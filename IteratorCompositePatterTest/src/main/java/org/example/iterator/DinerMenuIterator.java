@@ -24,4 +24,9 @@ public class DinerMenuIterator implements Iterator {
         position += 1;
         return menuItem;
     }
+
+    @Override
+    public void initPosition(){
+        this.position = 0;
+    }
 }

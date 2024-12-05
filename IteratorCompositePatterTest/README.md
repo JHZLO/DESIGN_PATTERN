@@ -13,9 +13,9 @@
 ## Iterator Pattern 적용
 - [x] `PancakeHouseMenuIterator` class
 - [x] `DinerMenuIterator` class
-- [ ] `printMenu()`를 개선
+- [x] `printMenu()`를 개선
   - for-each 사용
-- [ ] `vegeterianMenu()` 개선
+- [x] `vegeterianMenu()` 개선
 
 ## Composite Pattern 적용
 - [ ] `Item` class 생성
