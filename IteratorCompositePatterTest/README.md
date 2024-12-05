@@ -7,7 +7,7 @@
   - 저녁 메뉴를 출력한다.
 - [x] `printMenu()` 메서드 생성하기
   - 통합 메뉴를 출력한다.
-- [ ] ` vegeterianMenu()` 메서드 생성하기
+- [x] ` vegeterianMenu()` 메서드 생성하기
   - 비건 메뉴를 출력한다.
 
 ## Iterator Pattern 적용
