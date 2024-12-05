@@ -18,11 +18,11 @@
 - [x] `vegeterianMenu()` 개선
 
 ## Composite Pattern 적용
-- [ ] `Item` class 생성
+- [x] `Item` class 생성
   - 이를 상속 받는 `Menu` class를 composite component로 정의
 
 ## Composite Pattern 활용
--[ ] `PancakeHouseMenuIterator`와 `DinerMenuIterator`를 Item class의 subclass로 만든다.
+- [ ] `PancakeHouseMenuIterator`와 `DinerMenuIterator`를 Item class의 subclass로 만든다.
 - [ ] composite pattern의  The `operation()` 을 메뉴 출력 또는 MenuItem을 차례로 전달하는 메소드를 정의하여 통합 메뉴를 출력한다.
 
 
