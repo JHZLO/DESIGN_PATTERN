@@ -5,11 +5,14 @@ import org.duck_example.src.domain.strategies.quack.QuackBehavior;
 import org.duck_example.src.domain.strategies.swim.SwimBehavior;
 
 public abstract class Duck {
-    protected QuackBehavior quackBehavior = null;
-    protected FlyBehavior flyBehavior = null;
-    protected SwimBehavior swimBehavior = null;
+    private final QuackBehavior quackBehavior;
+    private final FlyBehavior flyBehavior;
+    private final SwimBehavior swimBehavior;
 
-    public Duck() {
+    public Duck(QuackBehavior quackBehavior, FlyBehavior flyBehavior, SwimBehavior swimBehavior) {
+        this.quackBehavior = quackBehavior;
+        this.flyBehavior = flyBehavior;
+        this.swimBehavior = swimBehavior;
     }
 
     public abstract String display();
