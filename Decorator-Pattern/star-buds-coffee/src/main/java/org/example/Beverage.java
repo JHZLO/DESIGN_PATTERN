@@ -1,8 +1,10 @@
 package org.example;
 
 public abstract class Beverage {
-    private String description = null;
+    protected String description = null;
 
-    public abstract String getDescription();
+    public String getDescription(){
+        return description;
+    };
     public abstract double cost();
 }
