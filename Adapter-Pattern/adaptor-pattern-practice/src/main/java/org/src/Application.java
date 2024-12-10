@@ -1,4 +1,4 @@
-package org.example;
+package org.src;
 
 public class Application {
     public static void main(String[] args) {
