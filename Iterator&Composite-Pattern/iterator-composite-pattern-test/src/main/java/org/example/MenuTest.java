@@ -1,7 +1,7 @@
 package org.example;
 
 import org.example.iterator.Iterator;
-import org.example.iterator.PancakeHouseMenuIterator;
+import org.example.menu.CompositeMenu;
 import org.example.menu.DinerMenu;
 import org.example.menu.Item;
 import org.example.menu.Menu;
@@ -10,62 +10,39 @@ import org.example.menu.PancakeHouseMenu;
 
 public class MenuTest {
     public static void main(String[] args) {
-        Menu pancakeHouseMenu = new PancakeHouseMenu();
-        Menu dinerMenu = new DinerMenu();
+        Item pancakeHouseMenu = new CompositeMenu("팬케이크 하우스 메뉴 ", "Branch CompositeMenu");
+        Item dinerMenu = new CompositeMenu("diner 메뉴", "dinner CompositeMenu");
+        Item vegetarianMenu = new CompositeMenu("vegetarian 메뉴", "vegetarian");
+        Item totalMenu = new CompositeMenu("전체 메뉴", "전체 메뉴");
 
+        totalMenu.add(pancakeHouseMenu);
+        totalMenu.add(dinerMenu);
 
-        Iterator pancakeIterator = pancakeHouseMenu.createIterator();
-        Iterator dinerIterator = dinerMenu.createIterator();
+        Menu dinnerMenuItem = new DinerMenu();
+        Menu pancakeHouseMenuItem = new PancakeHouseMenu();
 
-        System.out.println("========== Branch Menu ==========");
-        branchMenu(pancakeIterator);
-        System.out.println();
+        Iterator pancakeIterator = pancakeHouseMenuItem.createIterator();
+        Iterator dinerIterator = dinnerMenuItem.createIterator();
 
-        System.out.println("========== Diner Menu ==========");
-        dinerMenu(dinerIterator);
-        System.out.println();
-
-        System.out.println("========== Total Menu ==========");
-        pancakeIterator = pancakeHouseMenu.createIterator();
-        dinerIterator = dinerMenu.createIterator();
-        printMenu(pancakeIterator, dinerIterator);
-        System.out.println();
-
-        System.out.println("========== Vegetarian Menu ==========");
-        pancakeIterator = pancakeHouseMenu.createIterator();
-        dinerIterator = dinerMenu.createIterator();
-        vegetarianMenu(pancakeIterator, dinerIterator);
-    }
-
-    private static void branchMenu(Iterator pancakeIterator) {
-        pancakeIterator.operation();
-    }
-
-    private static void dinerMenu(Iterator dinerIterator) {
-        dinerIterator.operation();
-    }
-
-    private static void printMenu(Iterator pancakeIterator, Iterator dinerIterator) {
-        pancakeIterator.operation();
-        dinerIterator.operation();
-    }
-
-    private static void vegetarianMenu(Iterator pancakeIterator, Iterator dinerIterator){
         while (pancakeIterator.hasNext()) {
             MenuItem menuItem = pancakeIterator.next();
-            if(menuItem.isVegetarian()){
-                System.out.print(menuItem.getName());
-                System.out.println("\t\t" + menuItem.getPrice());
-                System.out.println("\t" + menuItem.getDescription());
+            if (menuItem.isVegetarian()) {
+                vegetarianMenu.add(menuItem);
             }
+            pancakeHouseMenu.add(menuItem);
         }
+
         while (dinerIterator.hasNext()) {
             MenuItem menuItem = dinerIterator.next();
-            if(menuItem.isVegetarian()){
-                System.out.print(menuItem.getName());
-                System.out.println("\t\t" + menuItem.getPrice());
-                System.out.println("\t" + menuItem.getDescription());
+            if (menuItem.isVegetarian()) {
+                vegetarianMenu.add(menuItem);
             }
+            dinerMenu.add(menuItem);
         }
+
+        pancakeHouseMenu.print();
+        dinerMenu.print();
+        vegetarianMenu.print();
+        totalMenu.print();
     }
 }
